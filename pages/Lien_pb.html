@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contraception - Vidéos explicatives</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap&family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Josefin Sans', sans-serif;
+            color: #333;
+            background: #f9f9f9;
+        }
+
+        header {
+            background-color: rgba(255, 183, 165, 0.9);
+            padding: 20px;
+            text-align: center;
+            border-bottom: 3px solid #fff;
+        }
+
+        header h1 {
+            font-size: 36px;
+            margin: 0;
+            font-family: 'Lora', serif;
+            color: #fff;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 5px;
+            font-family: 'Dancing Script', serif;
+            color: #fff;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 20px auto;
+            background: rgba(255, 255, 255, 0.9);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        .content h2 {
+            font-family: 'Lora', serif;
+            text-align: center;
+        }
+
+        .btn-container {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: #fff;
+            background-color: #A8E6CF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            cursor: pointer;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+
+        .btn:hover {
+            background-color: #89BFD1;
+        }
+
+        .video-container {
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        iframe {
+            width: 80%;
+            height: 400px;
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Vidéos sur les différentes méthodes de contraception</h1>
+    <p>Choisissez une méthode pour visionner la vidéo correspondante.</p>
+</header>
+<div class="content">
+    <h2>Pour les femmes</h2>
+    <div class="btn-container">
+        <button class="btn" onclick="showVideo('https://e-college.indre.fr/POD/video/1183-choisirsacontraception-limplant-contraceptif/?is_iframe=true')">Implant contraceptif</button>
+        <button class="btn" onclick="showVideo('https://www.youtube.com/embed/b7lzIZZHxhU')">Pilule contraceptive</button>
+        <button class="btn" onclick="showVideo('https://mon-e-college.loiret.fr/POD/video/1185-choisirsacontraception-le-patch-contraceptif/?is_iframe=true')">Patch contraceptif</button>
+        <button class="btn" onclick="showVideo('https://e-college.indre.fr/POD/video/1173-choisirsacontraception-le-sterilet/?is_iframe=true')">Stérilet</button>
+    </div>
+
+    <h2>Pour les hommes</h2>
+    <div class="btn-container">
+        <button class="btn" onclick="showVideo('https://www.youtube.com/embed/nBqoA1_T0nE')">Contraception thermique</button>
+        <button class="btn" onclick="showVideo('https://www.youtube.com/embed/9QluTJjKUAU')">Vasectomie</button>
+        <button class="btn" onclick="showVideo('https://lycees.netocentre.fr/POD/video/1187-choisirsacontraception-le-preservatif-masculin/?is_iframe=true')">Préservatifs masculins</button>
+    </div>
+
+    <div class="video-container" id="video-container">
+        <p>Choisissez une vidéo pour qu'elle s'affiche ici.</p>
+    </div>
+
+    <h2>Liens directs</h2>
+    <ul>
+        <li><a href="https://e-college.indre.fr/POD/video/1183-choisirsacontraception-limplant-contraceptif/?is_iframe=true" target="_blank">Implant contraceptif</a></li>
+        <li><a href="https://www.youtube.com/watch?v=b7lzIZZHxhU" target="_blank">Pilule contraceptive</a></li>
+        <li><a href="https://mon-e-college.loiret.fr/POD/video/1185-choisirsacontraception-le-patch-contraceptif/?is_iframe=true" target="_blank">Patch contraceptif</a></li>
+        <li><a href="https://e-college.indre.fr/POD/video/1173-choisirsacontraception-le-sterilet/?is_iframe=true" target="_blank">Stérilet</a></li>
+        <li><a href="https://www.youtube.com/watch?v=nBqoA1_T0nE" target="_blank">Contraception thermique</a></li>
+        <li><a href="https://www.youtube.com/watch?v=9QluTJjKUAU" target="_blank">Vasectomie</a></li>
+        <li><a href="https://lycees.netocentre.fr/POD/video/1187-choisirsacontraception-le-preservatif-masculin/" target="_blank">Préservatifs masculins</a></li>
+    </ul>
+</div>
+
+<script>
+    function showVideo(url) {
+        const videoContainer = document.getElementById('video-container');
+        videoContainer.innerHTML = `<iframe src="${url}" allowfullscreen></iframe>`;
+    }
+</script>
+</body>
+</html>
