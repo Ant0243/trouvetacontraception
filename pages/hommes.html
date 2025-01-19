@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Moyens de Contraception pour les Hommes</title>
+  <!-- Importer les polices Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <style>
+    /* Styles généraux */
+    body {
+      margin: 0;
+      padding: 0;
+      background: url('../Image/fond-hommes.png') no-repeat center center fixed;
+      background-size: cover;
+      color: #333;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Menu fixe en haut */
+    .top-menu {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: rgba(163, 201, 226, 0.9); /* Bleu doux */
+      color: #fff;
+      display: flex;
+      justify-content: center;
+      padding: 10px 0;
+      z-index: 1000;
+      box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    /* Header */
+    header {
+      text-align: center;
+      padding: 80px 20px 40px; /* Ajout d'espace pour le menu fixe */
+      background-color: rgba(163, 201, 226, 0.8);
+      color: #fff;
+    }
+
+    header h1 {
+      font-family: 'Lora', serif;
+      font-size: 40px;
+      margin: 0;
+    }
+
+    header p {
+      font-family: 'Dancing Script', serif;
+      font-size: 22px;
+      margin: 10px 0;
+    }
+
+    /* Section de contenu */
+    .content {
+      padding: 20px;
+      text-align: center;
+    }
+
+    .content h2 {
+      font-family: 'Lora', serif;
+      font-size: 30px;
+      color: #333;
+      margin-bottom: 20px;
+    }
+
+    .method {
+      background-color: rgba(163, 201, 226, 0.9); /* Bleu doux */
+      border-radius: 10px;
+      padding: 20px;
+      margin: 20px auto;
+      width: 80%;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    .method h3 {
+      font-size: 24px;
+      color: #333;
+    }
+
+    .method p {
+      font-size: 18px;
+      color: #555;
+    }
+
+    /* Boutons */
+    .btn {
+      display: inline-block;
+      background-color: #A8E6CF; /* Vert menthe */
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 18px;
+      margin-top: 10px;
+      transition: background-color 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #89BFD1;
+    }
+
+    /* Menu Hamburger */
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      margin: 20px;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 1001;
+    }
+
+    .hamburger div {
+      width: 100%;
+      height: 3px;
+      background-color: #333;
+      transition: all 0.3s;
+    }
+
+    .hamburger.active div:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active div:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Menu déroulant */
+    .menu {
+      position: fixed;
+      top: 60px;
+      left: 15px;
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.open {
+      display: flex;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .menu a:hover {
+      color: #007bff;
+    }
+
+  </style>
+<header>
+  <h1>Moyens de Contraception pour les Hommes</h1>
+  <p>Découvre toutes les options adaptées pour une contraception efficace et responsable.</p>
+</header>
+
+<div class="content">
+  <div id="preservatifs" class="method">
+    <h3>Préservatifs</h3>
+    <p>Une solution simple et efficace pour prévenir les grossesses et les MST.</p>
+    <a href="./Homme/Preservatifs.html" class="btn">Aller voir</a>
+  </div>
+
+  <div id="vasectomie" class="method">
+    <h3>Vasectomie</h3>
+    <p>Une méthode chirurgicale permanente pour ceux qui ne souhaitent plus avoir d’enfants.</p>
+    <a href="./Homme/Vastecomie.html" class="btn">Aller voir</a>
+  </div>
+
+  <div id="contraception-thermique" class="method">
+    <h3>Contraception Thermique</h3>
+    <p>Une méthode innovante basée sur la chaleur pour réduire la production de spermatozoïdes.</p>
+    <a href="./Homme/Contraception%20Thermique.html" class="btn">Aller voir</a>
+  </div>
+</div>
+
+<!-- Navigation bar -->
+<div class="hamburger" id="hamburger">
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+
+<!-- Dropdown menu -->
+<div class="menu" id="menu">
+  <a href="../index.html">Accueil</a>
+  <a href="hommes.html">Hommes</a>
+  <a href="femmes.html">Femmes</a>
+  <a href="aide.html">J'ai besoin d'aide</a>
+</div>
+
+<script>
+  const hamburger = document.getElementById('hamburger');
+  const menu = document.getElementById('menu');
+
+  hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    menu.classList.toggle('open');
+  });
+</script>
+</body>
+</html>

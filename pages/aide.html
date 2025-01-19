@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>J'ai besoin d'aide</title>
+    <!-- Importation des polices -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@100..700&display=swap&family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: url('../Image/fond-helps.png') no-repeat center center fixed;
+            background-size: cover;
+            font-family: 'Josefin Sans', sans-serif;
+            color: #333;
+        }
+
+        header {
+            background-color: rgba(200, 200, 200, 0.9);
+            padding: 20px;
+            text-align: center;
+        }
+
+        header h1 {
+            font-family: 'Lora', serif;
+            font-size: 40px;
+            margin: 0;
+        }
+
+        header p {
+            font-family: 'Dancing Script', serif;
+            font-size: 22px;
+        }
+
+        .faq {
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .faq-item {
+            background-color: #fff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            padding: 10px 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            cursor: pointer;
+        }
+
+        .faq-item h3 {
+            font-size: 20px;
+            margin: 0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .faq-item p {
+            font-size: 18px;
+            margin: 10px 0 0;
+            display: none;
+            line-height: 1.6;
+        }
+
+        .faq-item.active p {
+            display: block;
+        }
+
+        .faq-item .icon {
+            font-size: 20px;
+        }
+
+        .contact-container {
+            border: 2px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            margin: 20px auto;
+            max-width: 800px;
+        }
+
+        .contact-container a {
+            display: block;
+            font-size: 20px;
+            font-weight: bold;
+            color: #007bff;
+            margin: 10px 0;
+            text-decoration: none;
+            transition: all 0.3s;
+        }
+
+        .contact-container a:hover {
+            color: #0056b3;
+        }
+
+        .contact-container p {
+            font-size: 18px;
+            margin: 10px 0;
+            color: #555;
+        }
+
+        .contact-container .important {
+            font-weight: bold;
+            color: #d9534f;
+            margin-top: 10px;
+        }
+
+        .guides {
+            margin: 20px auto;
+            max-width: 800px;
+            text-align: center;
+        }
+
+        .guides h2 {
+            font-family: 'Lora', serif;
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+
+        .guides .btn {
+            background-color: #A8E6CF;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+            text-decoration: none;
+            font-size: 18px;
+            margin: 10px;
+            display: inline-block;
+            transition: background-color 0.3s;
+        }
+
+        .guides .btn:hover {
+            background-color: #89BFD1;
+        }
+
+        /* Hamburger menu */
+        .hamburger {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 30px;
+            height: 20px;
+            cursor: pointer;
+            margin: 20px;
+            position: fixed;
+            top: 15px;
+            left: 15px;
+            z-index: 1001;
+        }
+
+        .hamburger div {
+            width: 100%;
+            height: 3px;
+            background-color: #333;
+            transition: all 0.3s;
+        }
+
+        .menu {
+            position: fixed;
+            top: 60px;
+            left: 15px;
+            display: none;
+            flex-direction: column;
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .menu.open {
+            display: flex;
+        }
+
+        .menu a {
+            text-decoration: none;
+            color: #333;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+
+        .menu a:hover {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>J'ai besoin d'aide</h1>
+    <p>Pose tes questions, explore nos guides et découvre des ressources adaptées à toi.</p>
+</header>
+<div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+<div class="menu" id="menu">
+    <a href="../index.html">Accueil</a>
+    <a href="hommes.html">Hommes</a>
+    <a href="femmes.html">Femmes</a>
+    <a href="aide.html">J'ai besoin d'aide</a>
+</div>
+<div class="faq">
+    <div class="faq-item">
+        <h3>Comment parler de contraception avec mes parents ? <span class="icon">▼</span></h3>
+        <p>Prépare ce que tu veux dire, choisis un moment calme, et sois honnête sur tes besoins.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Où trouver des informations fiables ? <span class="icon">▼</span></h3>
+        <p>Des sites comme <a href="https://www.filsantejeunes.com" target="_blank">FilSantéJeunes.com</a> offrent des informations claires et adaptées.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Quels sont les moyens de contraception disponibles ? <span class="icon">▼</span></h3>
+        <p>Il existe des moyens hormonaux, mécaniques et naturels. Consulte un professionnel.</p>
+    </div>
+    <div class="faq-item">
+        <h3>Est-ce que la contraception est efficace ? <span class="icon">▼</span></h3>
+        <p>Oui, si elle est utilisée correctement. Suis les recommandations de ton médecin.</p>
+    </div>
+    <div class="faq-item">
+        <h3>À qui demander de l'aide en cas de doute ? <span class="icon">▼</span></h3>
+        <p>Consulte un médecin, une infirmière ou une sage-femme pour toute question.</p>
+    </div>
+</div>
+<div class="contact-container">
+    <h2>Avec qui parler ?</h2>
+    <a href="#">L'infirmière scolaire :</a>
+    <p>Une personne de confiance au collège ou lycée.</p>
+    <a href="#">Un(e) psy scolaire :</a>
+    <p>Pour discuter de tes émotions et de tes craintes.</p>
+    <a href="#">Une sage-femme libérale :</a>
+    <p>Pour t'accompagner dans tes choix.</p>
+    <p class="important">Ne reste pas seul(e). Il y a toujours quelqu'un pour t'aider !</p>
+</div>
+<div class="guides">
+    <h2>Guides utiles</h2>
+    <a href="./Femmes./v2 recap.html" class="btn">Contraception pour les femmes</a>
+    <a href="./Homme./recap_hommes.html" class="btn">Contraception pour les hommes</a>
+    <a href="https://www.filsantejeunes.com" target="_blank" class="btn">FilSantéJeunes.com</a>
+</div>
+<script>
+    const faqItems = document.querySelectorAll('.faq-item');
+    faqItems.forEach(item => {
+        item.addEventListener('click', () => {
+            item.classList.toggle('active');
+        });
+    });
+
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        menu.classList.toggle('open');
+    });
+</script>
+</body>
+</html>

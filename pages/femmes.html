@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moyens de Contraception</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+
+        /* Menu Hamburger */
+    .hamburger {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: 30px;
+      height: 20px;
+      cursor: pointer;
+      margin: 20px;
+      position: fixed;
+      top: 15px;
+      left: 15px;
+      z-index: 1001;
+    }
+
+    .hamburger div {
+      width: 100%;
+      height: 3px;
+      background-color: #333;
+      transition: all 0.3s;
+    }
+
+    .hamburger.active div:nth-child(1) {
+      transform: translateY(9px) rotate(45deg);
+    }
+
+    .hamburger.active div:nth-child(2) {
+      opacity: 0;
+    }
+
+    .hamburger.active div:nth-child(3) {
+      transform: translateY(-9px) rotate(-45deg);
+    }
+
+    /* Menu déroulant */
+    .menu {
+      position: fixed;
+      top: 60px;
+      left: 15px;
+      display: none;
+      flex-direction: column;
+      background-color: rgba(255, 255, 255, 0.9);
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .menu.open {
+      display: flex;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: #333;
+      font-size: 18px;
+      margin-bottom: 10px;
+    }
+
+    .menu a:hover {
+      color: #007bff;
+    }
+
+
+        /* Styles généraux */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Josefin Sans', sans-serif;
+            color: #333;
+            background: url('../Image/fond-femmes.png') no-repeat center center fixed; /* Fond d'écran */
+            background-size: cover;
+            animation: zoomIn 1s ease; /* Effet de zoom au chargement */
+        }
+
+        @keyframes zoomIn {
+            from {
+                transform: scale(0.95);
+                opacity: 0;
+            }
+            to {
+                transform: scale(1);
+                opacity: 1;
+            }
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: rgba(255, 183, 165, 0.8); /* Corail translucide */
+            color: white;
+        }
+
+        header h1 {
+            font-family: 'Lora', serif;
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 20px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            width: 260px;
+            text-align: center;
+            padding: 20px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            cursor: pointer;
+        }
+
+        .card:hover {
+            transform: translateY(-10px); /* L'effet de survol */
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+        }
+
+        .card h3 {
+            font-family: 'Lora', serif;
+            font-size: 22px;
+            color: #007bff;
+            margin: 10px 0;
+        }
+
+        .card p {
+            font-size: 16px;
+            color: #555;
+            margin-bottom: 15px;
+        }
+
+        .card img {
+            width: 100%;
+            height: auto;
+            background-color: #f8f8f8;
+            border-bottom: 3px solid #f2f2f2;
+            border-radius: 10px 10px 0 0;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            color: white;
+            background-color: #A8E6CF;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .btn:hover {
+            background-color: #89BFD1;
+        }
+
+        .recap-header {
+            margin-top: 40px;
+            background-color: rgba(255, 183, 165, 0.9);
+            color: white;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .video-btn {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .video-btn .btn-large {
+            font-size: 20px;
+            padding: 15px 30px;
+            background-color: #007bff;
+        }
+
+        .video-btn .btn-large:hover {
+            background-color: #0056b3;
+        }
+
+        /* Permet de rendre les cartes cliquables */
+        .card.clickable {
+            cursor: pointer;
+    </style>
+</head>
+<body>
+<header>
+    <h1>Choisissez votre Moyen de Contraception</h1>
+    <p>Explorez les différentes options et sélectionnez celle qui vous convient le mieux.</p>
+</header>
+
+<!-- Section principale (sans boutons, clic sur toute la carte) -->
+<div class="container">
+    <div class="card clickable" onclick="location.href='./Femmes/pilule.html'">
+        <h3>Pilule contraceptive</h3>
+        <p>Une méthode hormonale simple et efficace, à prendre quotidiennement.</p>
+    </div>
+
+    <div class="card clickable" onclick="location.href='./Femmes/sterilet.html'">
+        <h3>Stérilet</h3>
+        <p>Une solution intra-utérine efficace, idéale pour une contraception à long terme.</p>
+    </div>
+
+    <div class="card clickable" onclick="location.href='./Femmes/implant.html'">
+        <h3>Implant contraceptif</h3>
+        <p>Un dispositif discret placé sous la peau, efficace pendant plusieurs années.</p>
+    </div>
+
+    <div class="card clickable" onclick="location.href='./Femmes/patch.html'">
+        <h3>Patch contraceptif</h3>
+        <p>Une alternative hormonale pratique, à renouveler chaque semaine.</p>
+    </div>
+</div>
+
+<!-- Section récapitulatif (avec boutons) --><!-- Section récapitulatif (avec boutons) -->
+<div class="recap-header">
+    <h1>Récapitulatif des moyens de contraception</h1>
+    <p>Découvrez les différentes options disponibles et choisissez celle qui vous convient le mieux.</p>
+</div>
+<div class="container">
+    <div class="card">
+        <img src="../../Image/Pilue%20contraceptive.png" alt="Pilule contraceptive">
+        <h3>Pilule contraceptive</h3>
+        <p>Une méthode hormonale simple et efficace, à prendre quotidiennement.</p>
+        <a href="./Femmes./recap.html#pilule" class="btn">En savoir plus</a>
+    </div>
+    <div class="card">
+        <img src="../../Image/Implant%20contraceptif.png" alt="Implant contraceptif">
+        <h3>Implant contraceptif</h3>
+        <p>Un petit dispositif sous-cutané, efficace pendant 3 ans.</p>
+        <a href="./Femmes./recap.html#implant" class="btn">En savoir plus</a>
+    </div>
+    <div class="card">
+        <img src="../../Image/Patch%20contraceptif.png" alt="Patch contraceptif">
+        <h3>Patch contraceptif</h3>
+        <p>Une méthode hormonale pratique et discrète, à renouveler chaque semaine.</p>
+        <a href="./Femmes./recap.html#patch" class="btn">En savoir plus</a>
+    </div>
+    <div class="card">
+        <img src="../../Image/Stérilet.png" alt="Stérilet">
+        <h3>Stérilet</h3>
+        <p>Une solution intra-utérine efficace pour une contraception à long terme.</p>
+        <a href="./Femmes./recap.html#sterilet" class="btn">En savoir plus</a>
+    </div>
+</div>
+
+<!-- Vidéo récapitulative -->
+<div class="video-btn">
+    <a href="https://youtu.be/OLijSL3g31Il" class="btn btn-large">Voir une vidéo récapitulative</a>
+</div>
+<!-- Navigation bar -->
+<div class="hamburger" id="hamburger">
+    <div></div>
+    <div></div>
+    <div></div>
+</div>
+
+<!-- Dropdown menu -->
+<div class="menu" id="menu">
+    <a href="../index.html">Accueil</a>
+    <a href="hommes.html">Hommes</a>
+    <a href="femmes.html">Femmes</a>
+    <a href="aide.html">J'ai besoin d'aide</a>
+</div>
+
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const menu = document.getElementById('menu');
+
+    hamburger.addEventListener('click', () => {
+      hamburger.classList.toggle('active');
+      menu.classList.toggle('open');
+    });
+</script>
+</body>
+</html>

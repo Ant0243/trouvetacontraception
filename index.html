@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Accueil - Moyens de Contraception</title>
+  <!-- Importer les polices Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Lora:ital,wght@0,400..700;1,400..700&display=swap" rel="stylesheet">
+  <style>
+    /* Styles généraux */
+    body {
+        margin: 0;
+        padding: 0;
+        background: url('./Image/fond.png') no-repeat center center fixed;
+        background-size: cover;
+        color: #333;
+        font-family: Arial, sans-serif;
+    }
+
+    /* Style pour l'en-tête */
+    header {
+        background-color: rgba(163, 201, 226, 0.9); /* Bleu doux avec transparence */
+        color: #fff;
+        padding: 20px;
+        text-align: center;
+    }
+
+    /* Police Lora pour le titre */
+    h1 {
+        font-family: 'Lora', serif;
+        font-size: 40px; /* Taille du titre */
+        margin: 0;
+    }
+
+    /* Police Dancing Script pour les paragraphes */
+    p {
+        font-family: 'Dancing Script', serif;
+        font-size: 22px; /* Taille du texte */
+        margin: 10px 0;
+    }
+
+    /* Conteneur principal */
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 20px;
+    }
+
+    /* Style pour les rubriques */
+    .rubrics {
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+        margin-bottom: 20px;
+    }
+
+    .rubric {
+        background-color: #A8E6CF; /* Vert menthe */
+        color: #333;
+        text-align: center;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 45%;
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        animation: fadeIn 1s ease-out;
+    }
+
+    /* Taille des images dans les rubriques */
+    .rubric img {
+        width: 80%; /* Largeur de 80% du conteneur */
+        height: auto;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    /* Effet au survol des rubriques */
+    .rubric:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Animation d'apparition */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    /* Style pour la rubrique d'aide */
+    .help {
+        background-color: #FFB7A5; /* Corail doux */
+        color: #333;
+        text-align: center;
+        padding: 15px; /* Réduction du padding */
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        width: 40%; /* Réduction de la largeur */
+        cursor: pointer;
+        transition: transform 0.3s, box-shadow 0.3s;
+        animation: fadeIn 1.5s ease-out;
+    }
+
+    /* Taille de l'image dans la rubrique d'aide */
+    .help img {
+        width: 80%;
+        height: auto;
+        border-radius: 10px;
+        margin-top: 10px;
+    }
+
+    /* Effet au survol pour la rubrique d'aide */
+    .help:hover {
+        transform: translateY(-5px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+
+    /* Pied de page */
+    footer {
+        background-color: rgba(212, 212, 212, 0.9); /* Gris clair avec transparence */
+        text-align: center;
+        padding: 10px;
+        margin-top: 20px;
+    }
+
+    /* Style du bouton dans le footer */
+    .footer-button {
+        display: inline-block;
+        margin-top: 10px;
+        padding: 10px 20px;
+        background-color: #A8E6CF; /* Vert menthe */
+        color: #333;
+        text-decoration: none;
+        font-size: 16px;
+        border-radius: 5px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .footer-button:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>www.trouve_ta_contraception.fr</h1>
+  <p>Tu es ado et tu te questionnes sur la contraception ?</p>
+  <p>Sur "trouve_ta_contraception.fr", tu auras toutes les réponses à tes questions ! Laisse-toi guider !</p>
+</header>
+<div class="container">
+  <div class="rubrics">
+    <div class="rubric" onclick="location.href='./pages/hommes.html'">
+      <p>Moyens de contraception pour les hommes</p>
+      <img src="Image/1.png" alt="Image pour les hommes">
+    </div>
+    <div class="rubric" onclick="location.href='./pages/femmes.html'">
+      <p>Moyens de contraception pour les femmes</p>
+      <img src="Image/2.png" alt="Image pour les femmes">
+    </div>
+  </div>
+  <div class="help" onclick="location.href='./pages/aide.html'">
+    <p>J'ai besoin d'aide</p>
+    <img src="Image/3.png" alt="Image pour besoin d'aide">
+  </div>
+</div>
+<footer>
+  <p>Travail réalisé par Antony et Matthys</p>
+  <a href="./pages/Lien_pb.html" class="footer-button">Problème avec les vidéos ? Clique ici</a>
+</footer>
+</body>
+</html>

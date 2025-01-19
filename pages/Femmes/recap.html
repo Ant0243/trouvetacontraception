@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Détails des Moyens de Contraception</title>
+    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;700&display=swap&family=Lora:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        /* Styles généraux */
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Josefin Sans', sans-serif;
+            color: #333;
+            background: #f8f9fa;
+        }
+
+        header {
+            text-align: center;
+            padding: 40px 20px;
+            background-color: #FFA69E;
+            color: white;
+        }
+
+        header h1 {
+            font-family: 'Lora', serif;
+            font-size: 36px;
+            margin: 0;
+        }
+
+        header p {
+            font-size: 18px;
+            margin-top: 10px;
+        }
+
+        .section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 1s ease forwards;
+        }
+
+        .section:not(:first-child) {
+            margin-top: 60px;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .section img {
+            width: 100%;
+            height: auto;
+            border-bottom: 3px solid #f2f2f2;
+        }
+
+        .section h2 {
+            font-family: 'Lora', serif;
+            font-size: 28px;
+            color: #333;
+            margin: 20px 0 10px;
+            text-align: center;
+        }
+
+        .section p {
+            font-size: 18px;
+            line-height: 1.8;
+            margin-bottom: 20px;
+            text-align: justify;
+            padding: 0 20px;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background: #FFA69E;
+            color: white;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+<header>
+    <h1>Détails des Moyens de Contraception</h1>
+    <p>Informations complètes pour un choix éclairé et responsable</p>
+</header>
+
+<!-- Section Pilule contraceptive -->
+<div id="pilule" class="section">
+    <img src="../../Image/Pilue%20contraceptive.png" alt="Pilule contraceptive">
+    <h2>Pilule contraceptive</h2>
+    <p>
+        La pilule contraceptive est une méthode hormonale qui doit être prise quotidiennement. Elle empêche l'ovulation et modifie
+        la muqueuse utérine pour prévenir toute grossesse. Facile d'utilisation, elle nécessite une rigueur pour être efficace.
+    </p>
+    <p>
+        **Avantages** : Elle est réversible, améliore certains troubles menstruels, et peut réduire les douleurs associées aux règles.
+        <br>
+        **Inconvénients** : Elle demande une prise quotidienne et peut provoquer des effets secondaires comme des nausées ou des maux de tête.
+    </p>
+</div>
+
+<!-- Section Implant contraceptif -->
+<div id="implant" class="section">
+    <img src="../../Image/Implant%20contraceptif.png" alt="Implant contraceptif">
+    <h2>Implant contraceptif</h2>
+    <p>
+        L'implant contraceptif est un petit bâtonnet inséré sous la peau du bras par un professionnel de santé. Il diffuse
+        des hormones en continu pour bloquer l'ovulation. Son efficacité est de trois ans.
+    </p>
+    <p>
+        **Avantages** : Discret, il ne nécessite aucun entretien quotidien et est très fiable. <br>
+        **Inconvénients** : Il peut entraîner des règles irrégulières et nécessite un retrait médical à la fin de son efficacité.
+    </p>
+</div>
+
+<!-- Section Patch contraceptif -->
+<div id="patch" class="section">
+    <img src="../../Image/Patch%20contraceptif.png" alt="Patch contraceptif">
+    <h2>Patch contraceptif</h2>
+    <p>
+        Le patch contraceptif est un dispositif qui libère des hormones à travers la peau. Il se colle sur une partie du corps
+        (ventre, bras, dos) et doit être changé chaque semaine.
+    </p>
+    <p>
+        **Avantages** : Simple à utiliser, il n'y a pas besoin d'y penser chaque jour. <br>
+        **Inconvénients** : Il peut provoquer des irritations cutanées et doit être remplacé rigoureusement chaque semaine.
+    </p>
+</div>
+
+<!-- Section Stérilet -->
+<div id="sterilet" class="section">
+    <img src="../../Image/Stérilet.png" alt="Stérilet">
+    <h2>Stérilet</h2>
+    <p>
+        Le stérilet, ou dispositif intra-utérin (DIU), est placé dans l'utérus par un professionnel. Il peut être hormonal
+        ou en cuivre. Sa durée de vie varie entre 3 à 10 ans selon le modèle.
+    </p>
+    <p>
+        **Avantages** : Très efficace, il est discret, longue durée, et nécessite peu d'entretien. <br>
+        **Inconvénients** : Peut provoquer des règles abondantes ou douloureuses avec le DIU en cuivre.
+    </p>
+</div>
+
+<footer>
+    <p>&copy; 2025 Moyens de Contraception. Tous droits réservés.</p>
+</footer>
+
+<!-- JavaScript pour descendre automatiquement à la section choisie -->
+<script>
+    // Vérifie si une ancre (#) est présente dans l'URL
+    document.addEventListener("DOMContentLoaded", function () {
+        const sectionId = window.location.hash; // Extrait l'ancre (exemple : #sterilet)
+        if (sectionId) {
+            const targetSection = document.querySelector(sectionId);
+            if (targetSection) {
+                // Scroll automatique vers la section
+                targetSection.scrollIntoView({ behavior: "smooth" });
+            }
+        }
+    });
+</script>
+</body>
+</html>
